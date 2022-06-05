@@ -9,7 +9,6 @@ const AlbumDetail = ({navigation, title, albumId}) => {
     headerContentStyle,
 
     headerTextStyle,
-    imageStyle,
   } = styles;
 
   return (
