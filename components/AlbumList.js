@@ -38,28 +38,6 @@ const AlbumList = (props) => {
       </View>
     )
   );
-
-  //   function renderAlbums() {
-  //   return photoset.map((album) => (
-  //     <AlbumDetail
-  //       navigation={props.navigation}
-  //       key={album.id}
-  //       title={album.title._content}
-  //       albumId={album.id}
-  //     />
-  //   ));
-  // }
-
-  // return (
-  //   (!photoset ?
-  //     <Text>Loading...</Text>
-  //     :
-  //     <View style={{ flex: 1 }}>
-  //       <ScrollView>{renderAlbums()}</ScrollView>
-  //     </View>
-  //   )
-  // )
-
 }
 
 export default AlbumList;

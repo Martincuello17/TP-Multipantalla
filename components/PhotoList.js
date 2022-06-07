@@ -44,28 +44,6 @@ const PhotoList = (props) => {
       </View>
     )
   );
-
-//   const renderPhotos = () => {
-//     return photos.map((photo) => (
-//       <PhotoDetail
-//         key={photo.title}
-//         title={photo.title}
-//         imageUrl={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}
-//       />
-//     ));
-//   }
-
-//   return (
-//     (!photos ?
-//       <View style={{ flex: 1 }}>
-//         <Text>Loading...</Text>
-//       </View>
-//       :
-//       <View style={{ flex: 1 }}>
-//         <ScrollView>{renderPhotos()}</ScrollView>
-//       </View>)
-//   )
-
 }
 
 export default PhotoList;
