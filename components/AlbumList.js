@@ -4,7 +4,7 @@ import axios from 'axios';
 import AlbumDetail from './AlbumDetail';
 
 const AlbumList = (props) => {
-  const [photoset, setPhoto] = useState(null);
+  const [photoset, setPhotoset] = useState(null);
 
   useEffect(() => {
     axios
@@ -12,7 +12,7 @@ const AlbumList = (props) => {
         `https://api.flickr.com/services/rest/?method=flickr.photosets.getList&api_key=6e8a597cb502b7b95dbd46a46e25db8d&user_id=137290658%40N08&format=json&nojsoncallback=1&#39;,`
       )
       .then((response) =>
-        setPhoto(response.data.photosets.photoset),
+        setPhotoset(response.data.photosets.photoset),
       );
   }, [])
 
