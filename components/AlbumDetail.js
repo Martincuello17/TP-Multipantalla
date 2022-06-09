@@ -36,7 +36,7 @@ const styles = {
   headerTextStyle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#06BCEE',
+    color: '#6CC5FF',
     textTransform: 'capitalize'
   },
   thumbnailStyle: {

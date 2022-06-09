@@ -9,21 +9,34 @@ import {createStackNavigator} from '@react-navigation/stack';
 const Stack = createStackNavigator();
 
 // Create a component
-const App = () => (
-  <NavigationContainer>
+const App = () => {
+  const { headerStyles, headerTitleStyle } = styles;
+
+  return (<NavigationContainer>
     <Stack.Navigator>
       <Stack.Screen
         name="albumList"
         component={AlbumList}
-        options={{title: 'Albums'}}
+        options={{ title: 'Albums', headerStyle: headerStyles, headerTitleStyle: headerTitleStyle }}
       />
       <Stack.Screen
         name="photoList"
         component={PhotoList}
-        options={{title: 'Photos'}}
+        options={{ title: 'Photos', headerStyle: headerStyles, headerTitleStyle: headerTitleStyle } }
       />
     </Stack.Navigator>
   </NavigationContainer>
-);
+  );
+};
+
+const styles = {
+  headerStyles: {
+    backgroundColor: '#121212',
+  },
+  headerTitleStyle: {
+    fontWeight: 'bold',
+    color: '#6CC5FF',
+  }
+};
 
 export default App;

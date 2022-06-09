@@ -52,7 +52,7 @@ const PhotoList = (props) => {
 const styles = {
   containerStyle: {
     flex: 1,
-    backgroundColor: '#FFE2A7'
+    backgroundColor: '#121212'
   },
 };
 
