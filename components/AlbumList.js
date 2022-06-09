@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, FlatList, Text, View } from 'react-native';
+import { StyleSheet, ScrollView, FlatList, Text, View } from 'react-native';
 import axios from 'axios';
 import AlbumDetail from './AlbumDetail';
 
 const AlbumList = (props) => {
   const [photoset, setPhotoset] = useState(null);
+  const { containerStyles
+  } = styles;
 
   useEffect(() => {
     axios
@@ -15,6 +17,7 @@ const AlbumList = (props) => {
         setPhotoset(response.data.photosets.photoset),
       );
   }, [])
+
 
   const renderAlbum = ({ item }) => (
     <AlbumDetail
@@ -29,7 +32,7 @@ const AlbumList = (props) => {
     (!photoset ?
       <Text>Loading...</Text>
       :
-      <View style={{ flex: 1 }}>
+      <View style={containerStyles}>
         <FlatList
           data={photoset}
           renderItem={renderAlbum}
@@ -39,5 +42,13 @@ const AlbumList = (props) => {
     )
   );
 }
+
+const styles = StyleSheet.create({
+  containerStyles: {
+    flex: 1,
+    backgroundColor: '#FFE2A7'
+  }
+});
+
 
 export default AlbumList;

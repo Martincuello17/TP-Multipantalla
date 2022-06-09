@@ -5,6 +5,9 @@ import PhotoDetail from './PhotoDetail';
 
 const PhotoList = (props) => {
   const [photos, setPhotos] = useState(null);
+  const {
+    containerStyle,
+  } = styles;
 
   useEffect(() => {
     const getPhotos = async () => {
@@ -35,7 +38,7 @@ const PhotoList = (props) => {
     (!photos ?
       <Text>Loading...</Text>
       :
-      <View style={{ flex: 1 }}>
+      <View style={containerStyle}>
         <FlatList
           data={photos}
           renderItem={renderPhoto}
@@ -45,5 +48,12 @@ const PhotoList = (props) => {
     )
   );
 }
+
+const styles = {
+  containerStyle: {
+    flex: 1,
+    backgroundColor: '#FFE2A7'
+  },
+};
 
 export default PhotoList;

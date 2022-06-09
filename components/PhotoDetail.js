@@ -10,7 +10,7 @@ const PhotoDetail = ({title, imageUrl}) => {
     headerContentStyle,
     thumbnailContainerStyle,
     headerTextStyle,
-    imageStyle,
+    imageStyle
   } = styles;
 
   return (
@@ -42,10 +42,16 @@ const styles = {
   },
   headerTextStyle: {
     fontSize: 18,
+    fontWeight: 'bold',
+    color: '#06BCEE',
+    textTransform: 'capitalize'
   },
   thumbnailStyle: {
     height: 50,
     width: 50,
+    borderWidth: 2,
+    borderColor: '#06BCEE',
+    borderRadius: 7,
   },
   thumbnailContainerStyle: {
     justifyContent: 'center',
@@ -57,6 +63,9 @@ const styles = {
     height: 300,
     flex: 1,
     width: null,
+    borderWidth: 4,
+    borderColor: '#06BCEE',
+    borderRadius: 20,
   },
 };
 

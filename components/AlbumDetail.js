@@ -7,7 +7,6 @@ import Button from './Button';
 const AlbumDetail = ({navigation, title, albumId}) => {
   const {
     headerContentStyle,
-
     headerTextStyle,
   } = styles;
 
@@ -36,6 +35,9 @@ const styles = {
   },
   headerTextStyle: {
     fontSize: 18,
+    fontWeight: 'bold',
+    color: '#06BCEE',
+    textTransform: 'capitalize'
   },
   thumbnailStyle: {
     height: 50,
